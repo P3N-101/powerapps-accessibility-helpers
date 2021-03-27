@@ -1,0 +1,1794 @@
+"'Contrast Checker' As CanvasComponent":
+    getLuminance(R As Number, G As Number, B As Number):
+        R:
+            Default: =100
+        G:
+            Default: =100
+        B:
+            Default: =100
+        ThisProperty:
+            Default: |-
+                =Sum(
+                    ('Contrast Checker'.sRGBtoLIN(R) * 0.2126) + 
+                    ('Contrast Checker'.sRGBtoLIN(G) * 0.7152) + 
+                    ('Contrast Checker'.sRGBtoLIN(B) * 0.0722)
+                )
+    sRGBtoLIN(colourChannel As Number):
+        colourChannel:
+            Default: =100
+        ThisProperty:
+            Default: |-
+                =If(
+                    Sum(colourChannel / 255) <= 0.03928,
+                    Sum(colourChannel / 255) / 12.92,
+                    Power(
+                        ((Sum(colourChannel / 255) + 0.055) / 1.055),
+                        2.4
+                    )
+                )
+    backgroundDefaultColor: |-
+        ="#E6EAF0"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =300
+    HEXtoDEC: |-
+        =Table(
+            {
+                DEC: 0,
+                HEX: "00"
+            },
+            {
+                DEC: 1,
+                HEX: "01"
+            },
+            {
+                DEC: 2,
+                HEX: "02"
+            },
+            {
+                DEC: 3,
+                HEX: "03"
+            },
+            {
+                DEC: 4,
+                HEX: "04"
+            },
+            {
+                DEC: 5,
+                HEX: "05"
+            },
+            {
+                DEC: 6,
+                HEX: "06"
+            },
+            {
+                DEC: 7,
+                HEX: "07"
+            },
+            {
+                DEC: 8,
+                HEX: "08"
+            },
+            {
+                DEC: 9,
+                HEX: "09"
+            },
+            {
+                DEC: 10,
+                HEX: "0A"
+            },
+            {
+                DEC: 11,
+                HEX: "0B"
+            },
+            {
+                DEC: 12,
+                HEX: "0C"
+            },
+            {
+                DEC: 13,
+                HEX: "0D"
+            },
+            {
+                DEC: 14,
+                HEX: "0E"
+            },
+            {
+                DEC: 15,
+                HEX: "0F"
+            },
+            {
+                DEC: 16,
+                HEX: "10"
+            },
+            {
+                DEC: 17,
+                HEX: "11"
+            },
+            {
+                DEC: 18,
+                HEX: "12"
+            },
+            {
+                DEC: 19,
+                HEX: "13"
+            },
+            {
+                DEC: 20,
+                HEX: "14"
+            },
+            {
+                DEC: 21,
+                HEX: "15"
+            },
+            {
+                DEC: 22,
+                HEX: "16"
+            },
+            {
+                DEC: 23,
+                HEX: "17"
+            },
+            {
+                DEC: 24,
+                HEX: "18"
+            },
+            {
+                DEC: 25,
+                HEX: "19"
+            },
+            {
+                DEC: 26,
+                HEX: "1A"
+            },
+            {
+                DEC: 27,
+                HEX: "1B"
+            },
+            {
+                DEC: 28,
+                HEX: "1C"
+            },
+            {
+                DEC: 29,
+                HEX: "1D"
+            },
+            {
+                DEC: 30,
+                HEX: "1E"
+            },
+            {
+                DEC: 31,
+                HEX: "1F"
+            },
+            {
+                DEC: 32,
+                HEX: "20"
+            },
+            {
+                DEC: 33,
+                HEX: "21"
+            },
+            {
+                DEC: 34,
+                HEX: "22"
+            },
+            {
+                DEC: 35,
+                HEX: "23"
+            },
+            {
+                DEC: 36,
+                HEX: "24"
+            },
+            {
+                DEC: 37,
+                HEX: "25"
+            },
+            {
+                DEC: 38,
+                HEX: "26"
+            },
+            {
+                DEC: 39,
+                HEX: "27"
+            },
+            {
+                DEC: 40,
+                HEX: "28"
+            },
+            {
+                DEC: 41,
+                HEX: "29"
+            },
+            {
+                DEC: 42,
+                HEX: "2A"
+            },
+            {
+                DEC: 43,
+                HEX: "2B"
+            },
+            {
+                DEC: 44,
+                HEX: "2C"
+            },
+            {
+                DEC: 45,
+                HEX: "2D"
+            },
+            {
+                DEC: 46,
+                HEX: "2E"
+            },
+            {
+                DEC: 47,
+                HEX: "2F"
+            },
+            {
+                DEC: 48,
+                HEX: "30"
+            },
+            {
+                DEC: 49,
+                HEX: "31"
+            },
+            {
+                DEC: 50,
+                HEX: "32"
+            },
+            {
+                DEC: 51,
+                HEX: "33"
+            },
+            {
+                DEC: 52,
+                HEX: "34"
+            },
+            {
+                DEC: 53,
+                HEX: "35"
+            },
+            {
+                DEC: 54,
+                HEX: "36"
+            },
+            {
+                DEC: 55,
+                HEX: "37"
+            },
+            {
+                DEC: 56,
+                HEX: "38"
+            },
+            {
+                DEC: 57,
+                HEX: "39"
+            },
+            {
+                DEC: 58,
+                HEX: "3A"
+            },
+            {
+                DEC: 59,
+                HEX: "3B"
+            },
+            {
+                DEC: 60,
+                HEX: "3C"
+            },
+            {
+                DEC: 61,
+                HEX: "3D"
+            },
+            {
+                DEC: 62,
+                HEX: "3E"
+            },
+            {
+                DEC: 63,
+                HEX: "3F"
+            },
+            {
+                DEC: 64,
+                HEX: "40"
+            },
+            {
+                DEC: 65,
+                HEX: "41"
+            },
+            {
+                DEC: 66,
+                HEX: "42"
+            },
+            {
+                DEC: 67,
+                HEX: "43"
+            },
+            {
+                DEC: 68,
+                HEX: "44"
+            },
+            {
+                DEC: 69,
+                HEX: "45"
+            },
+            {
+                DEC: 70,
+                HEX: "46"
+            },
+            {
+                DEC: 71,
+                HEX: "47"
+            },
+            {
+                DEC: 72,
+                HEX: "48"
+            },
+            {
+                DEC: 73,
+                HEX: "49"
+            },
+            {
+                DEC: 74,
+                HEX: "4A"
+            },
+            {
+                DEC: 75,
+                HEX: "4B"
+            },
+            {
+                DEC: 76,
+                HEX: "4C"
+            },
+            {
+                DEC: 77,
+                HEX: "4D"
+            },
+            {
+                DEC: 78,
+                HEX: "4E"
+            },
+            {
+                DEC: 79,
+                HEX: "4F"
+            },
+            {
+                DEC: 80,
+                HEX: "50"
+            },
+            {
+                DEC: 81,
+                HEX: "51"
+            },
+            {
+                DEC: 82,
+                HEX: "52"
+            },
+            {
+                DEC: 83,
+                HEX: "53"
+            },
+            {
+                DEC: 84,
+                HEX: "54"
+            },
+            {
+                DEC: 85,
+                HEX: "55"
+            },
+            {
+                DEC: 86,
+                HEX: "56"
+            },
+            {
+                DEC: 87,
+                HEX: "57"
+            },
+            {
+                DEC: 88,
+                HEX: "58"
+            },
+            {
+                DEC: 89,
+                HEX: "59"
+            },
+            {
+                DEC: 90,
+                HEX: "5A"
+            },
+            {
+                DEC: 91,
+                HEX: "5B"
+            },
+            {
+                DEC: 92,
+                HEX: "5C"
+            },
+            {
+                DEC: 93,
+                HEX: "5D"
+            },
+            {
+                DEC: 94,
+                HEX: "5E"
+            },
+            {
+                DEC: 95,
+                HEX: "5F"
+            },
+            {
+                DEC: 96,
+                HEX: "60"
+            },
+            {
+                DEC: 97,
+                HEX: "61"
+            },
+            {
+                DEC: 98,
+                HEX: "62"
+            },
+            {
+                DEC: 99,
+                HEX: "63"
+            },
+            {
+                DEC: 100,
+                HEX: "64"
+            },
+            {
+                DEC: 101,
+                HEX: "65"
+            },
+            {
+                DEC: 102,
+                HEX: "66"
+            },
+            {
+                DEC: 103,
+                HEX: "67"
+            },
+            {
+                DEC: 104,
+                HEX: "68"
+            },
+            {
+                DEC: 105,
+                HEX: "69"
+            },
+            {
+                DEC: 106,
+                HEX: "6A"
+            },
+            {
+                DEC: 107,
+                HEX: "6B"
+            },
+            {
+                DEC: 108,
+                HEX: "6C"
+            },
+            {
+                DEC: 109,
+                HEX: "6D"
+            },
+            {
+                DEC: 110,
+                HEX: "6E"
+            },
+            {
+                DEC: 111,
+                HEX: "6F"
+            },
+            {
+                DEC: 112,
+                HEX: "70"
+            },
+            {
+                DEC: 113,
+                HEX: "71"
+            },
+            {
+                DEC: 114,
+                HEX: "72"
+            },
+            {
+                DEC: 115,
+                HEX: "73"
+            },
+            {
+                DEC: 116,
+                HEX: "74"
+            },
+            {
+                DEC: 117,
+                HEX: "75"
+            },
+            {
+                DEC: 118,
+                HEX: "76"
+            },
+            {
+                DEC: 119,
+                HEX: "77"
+            },
+            {
+                DEC: 120,
+                HEX: "78"
+            },
+            {
+                DEC: 121,
+                HEX: "79"
+            },
+            {
+                DEC: 122,
+                HEX: "7A"
+            },
+            {
+                DEC: 123,
+                HEX: "7B"
+            },
+            {
+                DEC: 124,
+                HEX: "7C"
+            },
+            {
+                DEC: 125,
+                HEX: "7D"
+            },
+            {
+                DEC: 126,
+                HEX: "7E"
+            },
+            {
+                DEC: 127,
+                HEX: "7F"
+            },
+            {
+                DEC: 128,
+                HEX: "80"
+            },
+            {
+                DEC: 129,
+                HEX: "81"
+            },
+            {
+                DEC: 130,
+                HEX: "82"
+            },
+            {
+                DEC: 131,
+                HEX: "83"
+            },
+            {
+                DEC: 132,
+                HEX: "84"
+            },
+            {
+                DEC: 133,
+                HEX: "85"
+            },
+            {
+                DEC: 134,
+                HEX: "86"
+            },
+            {
+                DEC: 135,
+                HEX: "87"
+            },
+            {
+                DEC: 136,
+                HEX: "88"
+            },
+            {
+                DEC: 137,
+                HEX: "89"
+            },
+            {
+                DEC: 138,
+                HEX: "8A"
+            },
+            {
+                DEC: 139,
+                HEX: "8B"
+            },
+            {
+                DEC: 140,
+                HEX: "8C"
+            },
+            {
+                DEC: 141,
+                HEX: "8D"
+            },
+            {
+                DEC: 142,
+                HEX: "8E"
+            },
+            {
+                DEC: 143,
+                HEX: "8F"
+            },
+            {
+                DEC: 144,
+                HEX: "90"
+            },
+            {
+                DEC: 145,
+                HEX: "91"
+            },
+            {
+                DEC: 146,
+                HEX: "92"
+            },
+            {
+                DEC: 147,
+                HEX: "93"
+            },
+            {
+                DEC: 148,
+                HEX: "94"
+            },
+            {
+                DEC: 149,
+                HEX: "95"
+            },
+            {
+                DEC: 150,
+                HEX: "96"
+            },
+            {
+                DEC: 151,
+                HEX: "97"
+            },
+            {
+                DEC: 152,
+                HEX: "98"
+            },
+            {
+                DEC: 153,
+                HEX: "99"
+            },
+            {
+                DEC: 154,
+                HEX: "9A"
+            },
+            {
+                DEC: 155,
+                HEX: "9B"
+            },
+            {
+                DEC: 156,
+                HEX: "9C"
+            },
+            {
+                DEC: 157,
+                HEX: "9D"
+            },
+            {
+                DEC: 158,
+                HEX: "9E"
+            },
+            {
+                DEC: 159,
+                HEX: "9F"
+            },
+            {
+                DEC: 160,
+                HEX: "A0"
+            },
+            {
+                DEC: 161,
+                HEX: "A1"
+            },
+            {
+                DEC: 162,
+                HEX: "A2"
+            },
+            {
+                DEC: 163,
+                HEX: "A3"
+            },
+            {
+                DEC: 164,
+                HEX: "A4"
+            },
+            {
+                DEC: 165,
+                HEX: "A5"
+            },
+            {
+                DEC: 166,
+                HEX: "A6"
+            },
+            {
+                DEC: 167,
+                HEX: "A7"
+            },
+            {
+                DEC: 168,
+                HEX: "A8"
+            },
+            {
+                DEC: 169,
+                HEX: "A9"
+            },
+            {
+                DEC: 170,
+                HEX: "AA"
+            },
+            {
+                DEC: 171,
+                HEX: "AB"
+            },
+            {
+                DEC: 172,
+                HEX: "AC"
+            },
+            {
+                DEC: 173,
+                HEX: "AD"
+            },
+            {
+                DEC: 174,
+                HEX: "AE"
+            },
+            {
+                DEC: 175,
+                HEX: "AF"
+            },
+            {
+                DEC: 176,
+                HEX: "B0"
+            },
+            {
+                DEC: 177,
+                HEX: "B1"
+            },
+            {
+                DEC: 178,
+                HEX: "B2"
+            },
+            {
+                DEC: 179,
+                HEX: "B3"
+            },
+            {
+                DEC: 180,
+                HEX: "B4"
+            },
+            {
+                DEC: 181,
+                HEX: "B5"
+            },
+            {
+                DEC: 182,
+                HEX: "B6"
+            },
+            {
+                DEC: 183,
+                HEX: "B7"
+            },
+            {
+                DEC: 184,
+                HEX: "B8"
+            },
+            {
+                DEC: 185,
+                HEX: "B9"
+            },
+            {
+                DEC: 186,
+                HEX: "BA"
+            },
+            {
+                DEC: 187,
+                HEX: "BB"
+            },
+            {
+                DEC: 188,
+                HEX: "BC"
+            },
+            {
+                DEC: 189,
+                HEX: "BD"
+            },
+            {
+                DEC: 190,
+                HEX: "BE"
+            },
+            {
+                DEC: 191,
+                HEX: "BF"
+            },
+            {
+                DEC: 192,
+                HEX: "C0"
+            },
+            {
+                DEC: 193,
+                HEX: "C1"
+            },
+            {
+                DEC: 194,
+                HEX: "C2"
+            },
+            {
+                DEC: 195,
+                HEX: "C3"
+            },
+            {
+                DEC: 196,
+                HEX: "C4"
+            },
+            {
+                DEC: 197,
+                HEX: "C5"
+            },
+            {
+                DEC: 198,
+                HEX: "C6"
+            },
+            {
+                DEC: 199,
+                HEX: "C7"
+            },
+            {
+                DEC: 200,
+                HEX: "C8"
+            },
+            {
+                DEC: 201,
+                HEX: "C9"
+            },
+            {
+                DEC: 202,
+                HEX: "CA"
+            },
+            {
+                DEC: 203,
+                HEX: "CB"
+            },
+            {
+                DEC: 204,
+                HEX: "CC"
+            },
+            {
+                DEC: 205,
+                HEX: "CD"
+            },
+            {
+                DEC: 206,
+                HEX: "CE"
+            },
+            {
+                DEC: 207,
+                HEX: "CF"
+            },
+            {
+                DEC: 208,
+                HEX: "D0"
+            },
+            {
+                DEC: 209,
+                HEX: "D1"
+            },
+            {
+                DEC: 210,
+                HEX: "D2"
+            },
+            {
+                DEC: 211,
+                HEX: "D3"
+            },
+            {
+                DEC: 212,
+                HEX: "D4"
+            },
+            {
+                DEC: 213,
+                HEX: "D5"
+            },
+            {
+                DEC: 214,
+                HEX: "D6"
+            },
+            {
+                DEC: 215,
+                HEX: "D7"
+            },
+            {
+                DEC: 216,
+                HEX: "D8"
+            },
+            {
+                DEC: 217,
+                HEX: "D9"
+            },
+            {
+                DEC: 218,
+                HEX: "DA"
+            },
+            {
+                DEC: 219,
+                HEX: "DB"
+            },
+            {
+                DEC: 220,
+                HEX: "DC"
+            },
+            {
+                DEC: 221,
+                HEX: "DD"
+            },
+            {
+                DEC: 222,
+                HEX: "DE"
+            },
+            {
+                DEC: 223,
+                HEX: "DF"
+            },
+            {
+                DEC: 224,
+                HEX: "E0"
+            },
+            {
+                DEC: 225,
+                HEX: "E1"
+            },
+            {
+                DEC: 226,
+                HEX: "E2"
+            },
+            {
+                DEC: 227,
+                HEX: "E3"
+            },
+            {
+                DEC: 228,
+                HEX: "E4"
+            },
+            {
+                DEC: 229,
+                HEX: "E5"
+            },
+            {
+                DEC: 230,
+                HEX: "E6"
+            },
+            {
+                DEC: 231,
+                HEX: "E7"
+            },
+            {
+                DEC: 232,
+                HEX: "E8"
+            },
+            {
+                DEC: 233,
+                HEX: "E9"
+            },
+            {
+                DEC: 234,
+                HEX: "EA"
+            },
+            {
+                DEC: 235,
+                HEX: "EB"
+            },
+            {
+                DEC: 236,
+                HEX: "EC"
+            },
+            {
+                DEC: 237,
+                HEX: "ED"
+            },
+            {
+                DEC: 238,
+                HEX: "EE"
+            },
+            {
+                DEC: 239,
+                HEX: "EF"
+            },
+            {
+                DEC: 240,
+                HEX: "F0"
+            },
+            {
+                DEC: 241,
+                HEX: "F1"
+            },
+            {
+                DEC: 242,
+                HEX: "F2"
+            },
+            {
+                DEC: 243,
+                HEX: "F3"
+            },
+            {
+                DEC: 244,
+                HEX: "F4"
+            },
+            {
+                DEC: 245,
+                HEX: "F5"
+            },
+            {
+                DEC: 246,
+                HEX: "F6"
+            },
+            {
+                DEC: 247,
+                HEX: "F7"
+            },
+            {
+                DEC: 248,
+                HEX: "F8"
+            },
+            {
+                DEC: 249,
+                HEX: "F9"
+            },
+            {
+                DEC: 250,
+                HEX: "FA"
+            },
+            {
+                DEC: 251,
+                HEX: "FB"
+            },
+            {
+                DEC: 252,
+                HEX: "FC"
+            },
+            {
+                DEC: 253,
+                HEX: "FD"
+            },
+            {
+                DEC: 254,
+                HEX: "FE"
+            },
+            {
+                DEC: 255,
+                HEX: "FF"
+            }
+        )
+    iconDefaultColor: |-
+        ="#536596"
+    OnReset: |-
+        =Set(iconColor,'Contrast Checker'.iconDefaultColor);
+        Set(backgroundColor,'Contrast Checker'.backgroundDefaultColor);
+    Width: =380
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    img_icon As image:
+        Fill: =ColorValue(inp_BackgroundColor.Text)
+        FocusedBorderColor: =img_icon.BorderColor
+        Height: =150
+        HoverBorderColor: =ColorFade(img_icon.BorderColor, 20%)
+        HoverFill: =ColorFade(img_icon.Fill, 20%)
+        Image: |-
+            ="data:image/svg+xml,"& EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='568' height='568'  version='1.1'>
+               <path fill='"& iconColor &"'
+            d='M290.59 192c-20.18 0-106.82 1.98-162.59 85.95V192c0-52.94-43.06-96-96-96-17.67 0-32 14.33-32 32s14.33 32 32 32c17.64 0 32 14.36 32 32v256c0 35.3 28.7 64 64 64h176c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-32l128-96v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V289.86c-10.29 2.67-20.89 4.54-32 4.54-61.81 0-113.52-44.05-125.41-102.4zM448 96h-64l-64-64v134.4c0 53.02 42.98 96 96 96s96-42.98 96-96V32l-64 64zm-72 80c-8.84 0-16-7.16-16-16s7.16-16 16-16 16 7.16 16 16-7.16 16-16 16zm80 0c-8.84 0-16-7.16-16-16s7.16-16 16-16 16 7.16 16 16-7.16 16-16 16z' />
+            </svg>")
+        PressedBorderColor: =ColorFade(img_icon.BorderColor, -20%)
+        PressedFill: =ColorFade(img_icon.Fill, -20%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Width: =150
+        X: =7
+        Y: =43
+        ZIndex: =5
+
+    lbl_ComponentName As label:
+        FocusedBorderColor: =lbl_ComponentName.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        HoverBorderColor: =lbl_ComponentName.BorderColor
+        HoverColor: =lbl_ComponentName.Color
+        HoverFill: =lbl_ComponentName.Fill
+        PaddingLeft: =0
+        PressedBorderColor: =lbl_ComponentName.BorderColor
+        PressedColor: =lbl_ComponentName.Color
+        PressedFill: =lbl_ComponentName.Fill
+        Text: ="Contrast Checker"
+        X: =7
+        Y: =6
+        ZIndex: =6
+
+    lbl_ContrastRatio As label:
+        Align: =Align.Center
+        Color: =If(Value(lbl_ContrastRatio.Text)< 3.1,Red,Green)
+        FocusedBorderColor: =lbl_ContrastRatio.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        HoverBorderColor: =lbl_ContrastRatio.BorderColor
+        HoverColor: =lbl_ContrastRatio.Color
+        HoverFill: =lbl_ContrastRatio.Fill
+        PaddingLeft: =0
+        PressedBorderColor: =lbl_ContrastRatio.BorderColor
+        PressedColor: =lbl_ContrastRatio.Color
+        PressedFill: =lbl_ContrastRatio.Fill
+        Size: =18
+        Text: |-
+            =If(
+                // Check which Value is higher, calculation then is (darkColor+0.05) / (lightColor+0.05)
+                Value(lbl_BackGroundLuminance.Text) > Value(lbl_IconColorLuminance.Text),
+                Text(
+                    Sum((Value(lbl_BackGroundLuminance.Text) + 0.05) / (Value(lbl_IconColorLuminance.Text) + 0.05)),
+                    "[$-en-GB]#.000"
+                ),
+                Text(
+                    Sum((Value(lbl_IconColorLuminance.Text) + 0.05) / (Value(lbl_BackGroundLuminance.Text) + 0.05)),
+                    "[$-en-GB]#.000"
+                )
+            )
+        Width: =115
+        X: =27
+        Y: =219
+        ZIndex: =18
+
+    lblIconColorOFI_2 As label:
+        Align: =Align.Center
+        FocusedBorderColor: =lblIconColorOFI_2.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        HoverBorderColor: =lblIconColorOFI_2.BorderColor
+        HoverColor: =lblIconColorOFI_2.Color
+        HoverFill: =lblIconColorOFI_2.Fill
+        PaddingLeft: =0
+        PressedBorderColor: =lblIconColorOFI_2.BorderColor
+        PressedColor: =lblIconColorOFI_2.Color
+        PressedFill: =lblIconColorOFI_2.Fill
+        Text: ="Contrast Ratio"
+        Width: =145
+        X: =12
+        Y: =194
+        ZIndex: =19
+
+    lbl_BackGroundLuminance_3 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Color: =ColorValue(inp_Color.Text)
+        FocusedBorderColor: =lbl_BackGroundLuminance_3.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        HoverBorderColor: =lbl_BackGroundLuminance_3.BorderColor
+        HoverColor: =lbl_BackGroundLuminance_3.Color
+        HoverFill: =lbl_BackGroundLuminance_3.Fill
+        PaddingLeft: =0
+        PressedBorderColor: =lbl_BackGroundLuminance_3.BorderColor
+        PressedColor: =lbl_BackGroundLuminance_3.Color
+        PressedFill: =lbl_BackGroundLuminance_3.Fill
+        Size: =7
+        Text: ="Must be above 3.1 to meet minimum accessibility"
+        X: =9
+        Y: =248
+        ZIndex: =34
+
+    "'Background Color' As group":
+        Height: =5
+        Width: =5
+        X: =32
+        Y: =40
+        ZIndex: =35
+
+        inp_BackgroundColor As text:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            Default: =backgroundColor
+            FocusedBorderColor: =inp_BackgroundColor.BorderColor
+            Height: =33
+            HintText: ="Enter color here"
+            HoverFill: =RGBA(186, 202, 226, 0)
+            PressedBorderColor: =inp_BackgroundColor.HoverBorderColor
+            PressedColor: =inp_BackgroundColor.Color
+            PressedFill: =inp_BackgroundColor.Fill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =192
+            X: =171
+            Y: =186
+            ZIndex: =7
+
+        lbl_BackgroundColorHeading As label:
+            FocusedBorderColor: =lbl_BackgroundColorHeading.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =lbl_BackgroundColorHeading.BorderColor
+            HoverColor: =lbl_BackgroundColorHeading.Color
+            HoverFill: =lbl_BackgroundColorHeading.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_BackgroundColorHeading.BorderColor
+            PressedColor: =lbl_BackgroundColorHeading.Color
+            PressedFill: =lbl_BackgroundColorHeading.Fill
+            Text: ="Background color"
+            Width: =161
+            X: =171
+            Y: =159
+            ZIndex: =8
+
+        value_BackGroundColor_R As label:
+            Align: =Align.Right
+            FocusedBorderColor: =value_BackGroundColor_R.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            HoverBorderColor: =value_BackGroundColor_R.BorderColor
+            HoverColor: =value_BackGroundColor_R.Color
+            HoverFill: =value_BackGroundColor_R.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =value_BackGroundColor_R.BorderColor
+            PressedColor: =value_BackGroundColor_R.Color
+            PressedFill: =value_BackGroundColor_R.Fill
+            Size: =10
+            Text: |+
+                =Slider_Background_R.Value
+                /*Right( String, NumberOfCharacters )*/
+                
+            Width: =30
+            X: =339
+            Y: =216
+            ZIndex: =13
+
+        value_BackGroundColor_G As label:
+            Align: =Align.Right
+            FocusedBorderColor: =value_BackGroundColor_G.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            HoverBorderColor: =value_BackGroundColor_G.BorderColor
+            HoverColor: =value_BackGroundColor_G.Color
+            HoverFill: =value_BackGroundColor_G.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =value_BackGroundColor_G.BorderColor
+            PressedColor: =value_BackGroundColor_G.Color
+            PressedFill: =value_BackGroundColor_G.Fill
+            Size: =10
+            Text: |+
+                =Slider_Background_G.Value
+                /*Right( String, NumberOfCharacters )*/
+                
+            Width: =30
+            X: =339
+            Y: =231
+            ZIndex: =14
+
+        value_BackGroundColor_B As label:
+            Align: =Align.Right
+            FocusedBorderColor: =value_BackGroundColor_B.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            HoverBorderColor: =value_BackGroundColor_B.BorderColor
+            HoverColor: =value_BackGroundColor_B.Color
+            HoverFill: =value_BackGroundColor_B.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =value_BackGroundColor_B.BorderColor
+            PressedColor: =value_BackGroundColor_B.Color
+            PressedFill: =value_BackGroundColor_B.Fill
+            Size: =10
+            Text: |+
+                =Slider_Background_B
+                /*Right( String, NumberOfCharacters )*/
+                
+            Width: =30
+            X: =339
+            Y: =245
+            ZIndex: =15
+
+        lbl_BackGroundLuminance As label:
+            Align: =Align.Right
+            Color: =ColorValue(inp_Color.Text)
+            FocusedBorderColor: =lbl_BackGroundLuminance.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =17
+            HoverBorderColor: =lbl_BackGroundLuminance.BorderColor
+            HoverColor: =lbl_BackGroundLuminance.Color
+            HoverFill: =lbl_BackGroundLuminance.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_BackGroundLuminance.BorderColor
+            PressedColor: =lbl_BackGroundLuminance.Color
+            PressedFill: =lbl_BackGroundLuminance.Fill
+            Size: =9
+            Text: |
+                ='Contrast Checker'.getLuminance(Slider_Background_R.Value,Slider_Background_G.Value,Slider_Background_B.Value)
+            Width: =81
+            X: =286
+            Y: =268
+            ZIndex: =17
+
+        Slider_Background_R As slider:
+            Default: =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_BackgroundColor.Text, 2, 2 )).DEC
+            FocusedBorderThickness: =0
+            HandleFill: =RGBA(83, 101, 150, 1)
+            HandleSize: =10
+            Height: =20
+            Max: =255
+            OnChange: |-
+                =Set(
+                    backgroundColor,
+                    Concatenate(
+                        "#",
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_R.Value
+                        ).HEX,
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_G.Value
+                        ).HEX,
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_B.Value
+                        ).HEX
+                    )
+                );
+                Reset(inp_BackgroundColor)
+            RailFill: =RGBA(230, 234, 240, 1)
+            RailThickness: =4
+            ValueFill: =RGBA(83, 101, 150, 1)
+            Width: =144
+            X: =188
+            Y: =218
+            ZIndex: =20
+
+        Slider_Background_G As slider:
+            Default: =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_BackgroundColor.Text, 4, 2 )).DEC
+            FocusedBorderThickness: =0
+            HandleFill: =RGBA(83, 101, 150, 1)
+            HandleSize: =10
+            Height: =20
+            Max: =255
+            OnChange: |-
+                =Set(
+                    backgroundColor,
+                    Concatenate(
+                        "#",
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_R.Value
+                        ).HEX,
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_G.Value
+                        ).HEX,
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_B.Value
+                        ).HEX
+                    )
+                );
+                Reset(inp_BackgroundColor)
+            RailFill: =RGBA(230, 234, 240, 1)
+            RailThickness: =4
+            ValueFill: =RGBA(83, 101, 150, 1)
+            Width: =144
+            X: =188
+            Y: =234
+            ZIndex: =21
+
+        Slider_Background_B As slider:
+            Default: =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_BackgroundColor.Text, 6, 2 )).DEC
+            FocusedBorderThickness: =0
+            HandleFill: =RGBA(83, 101, 150, 1)
+            HandleSize: =10
+            Height: =20
+            Max: =255
+            OnChange: |-
+                =Set(
+                    backgroundColor,
+                    Concatenate(
+                        "#",
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_R.Value
+                        ).HEX,
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_G.Value
+                        ).HEX,
+                        LookUp(
+                            'Contrast Checker'.HEXtoDEC,
+                            DEC = Slider_Background_B.Value
+                        ).HEX
+                    )
+                );
+                Reset(inp_BackgroundColor)
+            RailFill: =RGBA(230, 234, 240, 1)
+            RailThickness: =4
+            ValueFill: =RGBA(83, 101, 150, 1)
+            Width: =144
+            X: =188
+            Y: =249
+            ZIndex: =22
+
+        lbl_RelativeBackgroundColorLuminance As label:
+            Align: =Align.Right
+            Color: =ColorValue(inp_Color.Text)
+            FocusedBorderColor: =lbl_RelativeBackgroundColorLuminance.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =17
+            HoverBorderColor: =lbl_RelativeBackgroundColorLuminance.BorderColor
+            HoverColor: =lbl_RelativeBackgroundColorLuminance.Color
+            HoverFill: =lbl_RelativeBackgroundColorLuminance.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_RelativeBackgroundColorLuminance.BorderColor
+            PressedColor: =lbl_RelativeBackgroundColorLuminance.Color
+            PressedFill: =lbl_RelativeBackgroundColorLuminance.Fill
+            Size: =9
+            Text: |
+                ="Relative Luminance:"
+            Width: =122
+            X: =171
+            Y: =268
+            ZIndex: =26
+
+        lbl_BackgroundColor_R As label:
+            FocusedBorderColor: =lbl_BackgroundColor_R.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_BackgroundColor_R.BorderColor
+            HoverColor: =lbl_BackgroundColor_R.Color
+            HoverFill: =lbl_BackgroundColor_R.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_BackgroundColor_R.BorderColor
+            PressedColor: =lbl_BackgroundColor_R.Color
+            PressedFill: =lbl_BackgroundColor_R.Fill
+            Size: =10
+            Text: ="R"
+            Width: =17
+            X: =171
+            Y: =218
+            ZIndex: =31
+
+        lbl_BackgroundColor_G As label:
+            FocusedBorderColor: =lbl_BackgroundColor_G.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_BackgroundColor_G.BorderColor
+            HoverColor: =lbl_BackgroundColor_G.Color
+            HoverFill: =lbl_BackgroundColor_G.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_BackgroundColor_G.BorderColor
+            PressedColor: =lbl_BackgroundColor_G.Color
+            PressedFill: =lbl_BackgroundColor_G.Fill
+            Size: =10
+            Text: ="G"
+            Width: =17
+            X: =171
+            Y: =232
+            ZIndex: =32
+
+        lbl_BackgroundColor_B As label:
+            FocusedBorderColor: =lbl_BackgroundColor_B.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_BackgroundColor_B.BorderColor
+            HoverColor: =lbl_BackgroundColor_B.Color
+            HoverFill: =lbl_BackgroundColor_B.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_BackgroundColor_B.BorderColor
+            PressedColor: =lbl_BackgroundColor_B.Color
+            PressedFill: =lbl_BackgroundColor_B.Fill
+            Size: =10
+            Text: ="B"
+            Width: =17
+            X: =171
+            Y: =248
+            ZIndex: =33
+
+    "'Icon Color' As group":
+        Height: =5
+        Width: =5
+        X: =32
+        Y: =40
+        ZIndex: =36
+
+        inp_Color As text:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            Default: =iconColor
+            FocusedBorderColor: =inp_Color.BorderColor
+            Height: =31
+            HintText: ="Enter color here"
+            HoverFill: =RGBA(186, 202, 226, 0)
+            PressedBorderColor: =inp_Color.HoverBorderColor
+            PressedColor: =inp_Color.Color
+            PressedFill: =inp_Color.Fill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =192
+            X: =171
+            Y: =62
+            ZIndex: =3
+
+        lbl_IconColorHeading As label:
+            FocusedBorderColor: =lbl_IconColorHeading.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: |
+                =30
+            HoverBorderColor: =lbl_IconColorHeading.BorderColor
+            HoverColor: =lbl_IconColorHeading.Color
+            HoverFill: =lbl_IconColorHeading.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_IconColorHeading.BorderColor
+            PressedColor: =lbl_IconColorHeading.Color
+            PressedFill: =lbl_IconColorHeading.Fill
+            Text: ="Icon color"
+            X: =171
+            Y: =36
+            ZIndex: =4
+
+        icon_R_value As label:
+            Align: =Align.Right
+            FocusedBorderColor: =icon_R_value.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =icon_R_value.BorderColor
+            HoverColor: =icon_R_value.Color
+            HoverFill: =icon_R_value.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =icon_R_value.BorderColor
+            PressedColor: =icon_R_value.Color
+            PressedFill: =icon_R_value.Fill
+            Size: =10
+            Text: |+
+                =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_Color.Text, 2, 2 )).DEC
+                
+                
+            Width: =30
+            X: =339
+            Y: =91
+            ZIndex: =10
+
+        icon_G_value As label:
+            Align: =Align.Right
+            FocusedBorderColor: =icon_G_value.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =icon_G_value.BorderColor
+            HoverColor: =icon_G_value.Color
+            HoverFill: =icon_G_value.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =icon_G_value.BorderColor
+            PressedColor: =icon_G_value.Color
+            PressedFill: =icon_G_value.Fill
+            Size: =10
+            Text: |+
+                =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_Color.Text, 4, 2 )).DEC
+                
+                
+            Width: =30
+            X: =339
+            Y: =106
+            ZIndex: =11
+
+        icon_B_value As label:
+            Align: =Align.Right
+            FocusedBorderColor: =icon_B_value.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =icon_B_value.BorderColor
+            HoverColor: =icon_B_value.Color
+            HoverFill: =icon_B_value.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =icon_B_value.BorderColor
+            PressedColor: =icon_B_value.Color
+            PressedFill: =icon_B_value.Fill
+            Size: =10
+            Text: |+
+                =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_Color.Text, 6, 2 )).DEC
+                
+                
+            Width: =32
+            X: =337
+            Y: =124
+            ZIndex: =12
+
+        lbl_IconColorLuminance As label:
+            Align: =Align.Right
+            Color: =ColorValue(inp_Color.Text)
+            FocusedBorderColor: =lbl_IconColorLuminance.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_IconColorLuminance.BorderColor
+            HoverColor: =lbl_IconColorLuminance.Color
+            HoverFill: =lbl_IconColorLuminance.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_IconColorLuminance.BorderColor
+            PressedColor: =lbl_IconColorLuminance.Color
+            PressedFill: =lbl_IconColorLuminance.Fill
+            Size: =9
+            Text: |
+                ='Contrast Checker'.getLuminance(Slider_Icon_R.Value,Slider_Icon_G.Value,Slider_Icon_B.Value)
+            Width: =70
+            X: =297
+            Y: =140
+            ZIndex: =16
+
+        Slider_Icon_R As slider:
+            Default: =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_Color.Text, 2, 2 )).DEC
+            FocusedBorderThickness: =0
+            HandleFill: =RGBA(83, 101, 150, 1)
+            HandleSize: =10
+            Height: =20
+            Max: =255
+            OnChange: |-
+                =Set(
+                    iconColor, Concatenate(
+                            "#",
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_R.Value
+                            ).HEX,
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_G.Value
+                            ).HEX,
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_B.Value
+                            ).HEX
+                        )
+                );
+                Reset(inp_Color);
+            RailFill: =RGBA(230, 234, 240, 1)
+            RailThickness: =4
+            ValueFill: =RGBA(83, 101, 150, 1)
+            Width: =138
+            X: =194
+            Y: =93
+            ZIndex: =23
+
+        Slider_Icon_G As slider:
+            Default: =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_Color.Text, 4, 2 )).DEC
+            FocusedBorderThickness: =0
+            HandleFill: =RGBA(83, 101, 150, 1)
+            HandleSize: =10
+            Height: =20
+            Max: =255
+            OnChange: |-
+                =Set(
+                    iconColor, Concatenate(
+                            "#",
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_R.Value
+                            ).HEX,
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_G.Value
+                            ).HEX,
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_B.Value
+                            ).HEX
+                        )
+                );
+                Reset(inp_Color);
+            RailFill: =RGBA(230, 234, 240, 1)
+            RailThickness: =4
+            ValueFill: =RGBA(83, 101, 150, 1)
+            Width: =138
+            X: =194
+            Y: =111
+            ZIndex: =24
+
+        Slider_Icon_B As slider:
+            Default: =LookUp('Contrast Checker'.HEXtoDEC,HEX =  Mid( inp_Color.Text, 6, 2 )).DEC
+            FocusedBorderThickness: =0
+            HandleFill: =RGBA(83, 101, 150, 1)
+            HandleSize: =10
+            Height: =20
+            Max: =255
+            OnChange: |-
+                =Set(
+                    iconColor, Concatenate(
+                            "#",
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_R.Value
+                            ).HEX,
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_G.Value
+                            ).HEX,
+                            LookUp(
+                                'Contrast Checker'.HEXtoDEC,
+                                DEC = Slider_Icon_B.Value
+                            ).HEX
+                        )
+                );
+                Reset(inp_Color);
+            RailFill: =RGBA(230, 234, 240, 1)
+            RailThickness: =4
+            ValueFill: =RGBA(83, 101, 150, 1)
+            Width: =138
+            X: =194
+            Y: =124
+            ZIndex: =25
+
+        lbl_IconRelativeLuminance As label:
+            Align: =Align.Right
+            Color: =ColorValue(inp_Color.Text)
+            FocusedBorderColor: =lbl_IconRelativeLuminance.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =17
+            HoverBorderColor: =lbl_IconRelativeLuminance.BorderColor
+            HoverColor: =lbl_IconRelativeLuminance.Color
+            HoverFill: =lbl_IconRelativeLuminance.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_IconRelativeLuminance.BorderColor
+            PressedColor: =lbl_IconRelativeLuminance.Color
+            PressedFill: =lbl_IconRelativeLuminance.Fill
+            Size: =9
+            Text: |
+                ="Relative Luminance:"
+            Width: =122
+            X: =171
+            Y: =142
+            ZIndex: =27
+
+        lbl_IconR As label:
+            FocusedBorderColor: =lbl_IconR.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_IconR.BorderColor
+            HoverColor: =lbl_IconR.Color
+            HoverFill: =lbl_IconR.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_IconR.BorderColor
+            PressedColor: =lbl_IconR.Color
+            PressedFill: =lbl_IconR.Fill
+            Size: =10
+            Text: ="R"
+            Width: =17
+            X: =171
+            Y: =93
+            ZIndex: =28
+
+        lbl_IconG As label:
+            FocusedBorderColor: =lbl_IconG.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_IconG.BorderColor
+            HoverColor: =lbl_IconG.Color
+            HoverFill: =lbl_IconG.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_IconG.BorderColor
+            PressedColor: =lbl_IconG.Color
+            PressedFill: =lbl_IconG.Fill
+            Size: =10
+            Text: ="G"
+            Width: =17
+            X: =171
+            Y: =107
+            ZIndex: =29
+
+        lbl_IconB As label:
+            FocusedBorderColor: =lbl_IconB.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =lbl_IconB.BorderColor
+            HoverColor: =lbl_IconB.Color
+            HoverFill: =lbl_IconB.Fill
+            PaddingLeft: =0
+            PressedBorderColor: =lbl_IconB.BorderColor
+            PressedColor: =lbl_IconB.Color
+            PressedFill: =lbl_IconB.Fill
+            Size: =10
+            Text: ="B"
+            Width: =17
+            X: =171
+            Y: =123
+            ZIndex: =30
+

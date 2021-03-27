@@ -1,0 +1,23 @@
+{
+  "ClientBuildDetails": {
+    "CommitHash": "602f5c653b72f39df546ebd851be81f36bb163b0",
+    "IsLocalBuild": true
+  },
+  "ClientPerFileChecksums": {
+    "AppCheckerResult.sarif": "C4_YYoMJpKgz9b2txM8uymT1BusFsAkb8w5596yRHI+fEc=",
+    "Components\\4.json": "C4_UcJsPn0WOEc1S9Yf0WExG9aYHJ34QRCrqiVUdezZOp0=",
+    "ComponentsMetadata.json": "C4_Kfy98J28CJCskC554nYDVxpT/EAOLkPrXKtGqJArWCY=",
+    "Controls\\1.json": "C4_TKQnRL9WrGdoDcY2qd3wig7eXLOJxXlfK72A0hi0AWs=",
+    "Controls\\3.json": "C4_L89GWtEW7Mv6WXD4p0qFNeI3aG/9EKK1U/GSGElrgBQ=",
+    "Header.json": "C4_3q2Xgk2CEbEAPNjjKnDSGWCXMf/dlTt1Wb15qmq0l+U=",
+    "Properties.json": "C4_ZLv1yaAfLWEJqrgI446Pk+BSiYzl3znSnlfqh1XItPA=",
+    "References\\DataSources.json": "C4_VzCQrdncE36Fr8hpWljhw7Ju5NtyGiaPGaaOC5QbyE4=",
+    "References\\Resources.json": "C4_ZJdAmavcOePEf/ritrdo+eNctsb5yVjjxaf418KTmPc=",
+    "References\\Templates.json": "C4_SSeQWaYai5ZqyIWxRAlzMA9F2hQJzIBtL/3GPYccy8E=",
+    "References\\Themes.json": "C4_zf8P6UuWSO7PwrbFDEPwOHOQ8OAQ9URzR5/wyEsFelc=",
+    "Resources\\m53enrg5.jpg": "C4_rCDdAHWiWQ3EyT7nMHwJ7vuJPT8rXBmbwYnfrpVznD0=",
+    "Resources\\PublishInfo.json": "C4_oFDFDDQC7WBBiQs/wNhOzSxfzYf5Ll79W2np8I8l8P0="
+  },
+  "ClientStampedChecksum": "C4_gCbyrrB1OTBtQBEoIwwS8qaICV5CrSjix8MqwE+sB58=",
+  "ServerStampedChecksum": "C4_gCbyrrB1OTBtQBEoIwwS8qaICV5CrSjix8MqwE+sB58="
+}

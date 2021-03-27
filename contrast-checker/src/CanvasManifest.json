@@ -1,0 +1,65 @@
+{
+  "FormatVersion": "0.19",
+  "Header": {
+    "DocVersion": "1.305",
+    "MinVersionToLoad": "1.305",
+    "MSAppStructureVersion": "2.0"
+  },
+  "Properties": {
+    "AppCreationSource": "AppFromScratch",
+    "AppDescription": "",
+    "AppPreviewFlagsKey": [
+      "delayloadscreens",
+      "blockmovingcontrol",
+      "projectionmapping",
+      "usedisplaynamemetadata",
+      "usenonblockingonstartrule",
+      "enhancedgroupcontrol",
+      "useguiddatatypes",
+      "useexperimentalcdsconnector",
+      "useenforcesavedatalimits",
+      "componentauthoring",
+      "reliableconcurrent",
+      "dataTableV2Control",
+      "nativecdsexperimental",
+      "useexperimentalsqlconnector",
+      "enablecdsfileandlargeimage",
+      "formuladataprefetch",
+      "enhanceddelegation",
+      "aibuilderserviceenrollment",
+      "enablesummerlandgeospatialfeatures"
+    ],
+    "Author": "",
+    "ContainsThirdPartyPcfControls": false,
+    "DefaultConnectedDataSourceMaxGetRowsCount": 500,
+    "DocumentAppType": "Phone",
+    "DocumentLayoutHeight": 1136,
+    "DocumentLayoutLockOrientation": true,
+    "DocumentLayoutMaintainAspectRatio": true,
+    "DocumentLayoutOrientation": "portrait",
+    "DocumentLayoutScaleToFit": true,
+    "DocumentLayoutWidth": 640,
+    "DocumentType": "ComponentLibrary",
+    "EnableInstrumentation": false,
+    "ErrorCount": 0,
+    "FileID": "3beb1c3c-39f3-4e12-b029-afa66b066006",
+    "Id": "ca7dbe3e-3394-4b26-aa98-b9fc4d26e0a8",
+    "InstrumentationKey": "",
+    "Name": "Accessibility+Helpers.msapp",
+    "OriginatingVersion": "1.305"
+  },
+  "PublishInfo": {
+    "AppName": "Accessibility Helpers",
+    "BackgroundColor": "rgba(251, 101, 60, 255)",
+    "IconColor": "RGBA(255,255,255,1)",
+    "IconName": "Library",
+    "LogoFileName": "logo.jpg",
+    "PublishDataLocally": false,
+    "PublishResourcesLocally": false,
+    "PublishTarget": "player",
+    "UserLocale": "en-US"
+  },
+  "ScreenOrder": [
+    "Screen1"
+  ]
+}

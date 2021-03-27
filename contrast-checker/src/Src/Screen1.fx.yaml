@@ -1,0 +1,44 @@
+Screen1 As screen:
+    OnVisible: =Reset('Contrast Checker_1')
+
+    "'Contrast Checker_1' As 'Contrast Checker'":
+        getLuminance: |-
+            =Sum(
+                ('Contrast Checker_1'.sRGBtoLIN(R) * 0.2126) + 
+                ('Contrast Checker_1'.sRGBtoLIN(G) * 0.7152) + 
+                ('Contrast Checker_1'.sRGBtoLIN(B) * 0.0722)
+            )
+        Height: =410
+        OnReset: |-
+            =Set(iconColor,'Contrast Checker_1'.iconDefaultColor);
+            Set(backgroundColor,'Contrast Checker_1'.backgroundDefaultColor);
+        sRGBtoLIN: |-
+            =If(
+                Sum(colourChannel / 255) <= 0.03928,
+                Sum(colourChannel / 255) / 12.92,
+                Power(
+                    ((Sum(colourChannel / 255) + 0.055) / 1.055),
+                    2.4
+                )
+            )
+        Width: =477
+        X: =76
+        Y: =56
+
+    Button2 As button:
+        BorderThickness: =1
+        Color: =ColorValue('Contrast Checker_1'.backgroundDefaultColor)
+        Fill: =ColorValue('Contrast Checker_1'.iconDefaultColor)
+        Height: =43
+        OnSelect: =Reset('Contrast Checker_1')
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =18
+        Text: ="Reset Colors"
+        Width: =176
+        X: =260
+        Y: =352
+        ZIndex: =2
+
